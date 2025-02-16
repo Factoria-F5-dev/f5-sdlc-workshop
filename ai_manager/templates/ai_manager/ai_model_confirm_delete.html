@@ -1,0 +1,12 @@
+{% extends 'ai_manager/base.html' %}
+{% block title %}Delete {{ model.name }}{% endblock %}
+{% block content %}
+
+<h1>Are you sure you want to delete "{{ model.name }}"?</h1>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn">Yes, Delete</button>
+    <a href="{% url 'ai_model_list' %}" class="btn">Cancel</a>
+</form>
+
+{% endblock %}
