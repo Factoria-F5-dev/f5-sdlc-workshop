@@ -1,0 +1,32 @@
+[
+  {
+      "model": "ai_manager.aimodel",
+      "pk": 1,
+      "fields": {
+          "name": "GPT-5",
+          "description": "Next-gen AI",
+          "author": "An American Author",
+          "created_at": "2021-09-01T00:00:00Z"
+      }
+  },
+  {
+    "model": "ai_manager.aimodel",
+    "pk": 2,
+    "fields": {
+        "name": "deepseek R3",
+        "description": "The alternative",
+        "author": "A Chinese Author",
+        "created_at": "2021-09-01T00:00:00Z"
+    }
+  },
+    {
+      "model": "ai_manager.aimodel",
+      "pk": 3,
+      "fields": {
+          "name": "F5 Model",
+          "description": "The Spanish alternative",
+          "author": "Angel Paredes",
+          "created_at": "2021-09-01T00:00:00Z"
+      }
+}
+]

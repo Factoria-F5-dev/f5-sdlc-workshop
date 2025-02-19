@@ -107,3 +107,19 @@ Luego, abre:
 }
 ```
 
+
+
+## Code Coverage
+```bash
+ # Install Django Coverage
+ pip install coverage 
+
+ # Set up coverage to only gather from our module
+ coverage run --source=ai_manager test
+
+ # Run code coverage
+ coverage run manage.py test
+ 
+ # Generate report
+ coverage report -m         
+```

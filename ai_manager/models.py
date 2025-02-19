@@ -8,14 +8,12 @@ class AIModel(models.Model):
     author = models.CharField(max_length=255, blank=True)
 
     def save(self, *args, **kwargs):
-        """Override the save method to fetch a random author if not provided."""
         if not self.author:
             self.author = self.get_random_author()
         super().save(*args, **kwargs)
 
     @staticmethod
     def get_random_author():
-        """Fetch a random author name from randomuser.me API."""
         try:
             response = requests.get("https://randomuser.me/api/")
             response.raise_for_status() 
