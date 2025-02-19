@@ -1,6 +1,7 @@
 from django.test import TestCase
 from ai_manager.models import AIModel
 from django.core.exceptions import ValidationError
+import requests
 from unittest.mock import patch
 
 class AIModelTest(TestCase):
@@ -25,7 +26,6 @@ class AIModelTest(TestCase):
         # Comprobamos que fallaria en tal caso
         with self.assertRaises(ValidationError):
             model.full_clean()
-            model.save()
 
 
     @patch("ai_manager.models.AIModel.get_random_author", return_value="Pepe Perez")
@@ -35,6 +35,13 @@ class AIModelTest(TestCase):
 
 
     # Crea un test para comprobar el metodo __str__ del modelo
-        
+    def test_ai_model_string_representation(self):
+        model = AIModel.objects.create(name="GPT-5", description="Next-gen AI", author="John Doe")
+        self.assertEqual(str(model), "GPT-5 by John Doe")    
 
     # Crea un test para comprobar que pasa en caso de que la API https://randomuser.me/api/    
+    @patch("ai_manager.models.requests.get")
+    def test_ai_model_get_random_author_handles_api_failure(self, mock_requests_get):
+        mock_requests_get.side_effect = requests.RequestException("API request failed")
+        author = AIModel.get_random_author()
+        self.assertEqual(author, "Unknown Author")
