@@ -26,6 +26,13 @@ Cada modelo de IA recibe automáticamente un **autor aleatorio** obtenido de [ra
 pip install -r requirements.txt
 ```
 
+### ** Optional: Virtual Environmennt**
+```bash
+python3 -m venv env
+source env/bin/activate
+pip install django
+pip install requests
+```
 ---
 
 ## 🚀 Ejecutar la Aplicación
