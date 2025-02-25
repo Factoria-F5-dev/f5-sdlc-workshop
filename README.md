@@ -18,7 +18,7 @@ Cada modelo de IA recibe automáticamente un **autor aleatorio** obtenido de [ra
 ### **1️⃣ Clonar el Repositorio**
 ```bash
  git clone https://github.com/peoplenarthax/f5-sdlc-workshop.git
- cd f5-sdlc-workshop.git
+ cd f5-sdlc-workshop
 ```
 
 ### **2️⃣ Instalar Dependencias**
