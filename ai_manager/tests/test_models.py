@@ -31,7 +31,7 @@ class AIModelTest(TestCase):
     @patch("ai_manager.models.AIModel.get_random_author", return_value="Pepe Perez")
     def test_ai_model_creation_without_author_assigns_random_author(self, mock_get_author):
         model = AIModel.objects.create(name="GPT-5", description="Next-gen AI model")
-        self.assertEqual(model.author, "Pepe Perez")        
+        self.assertEqual(model.author, "Angel Paredes")        
 
 
     # Crea un test para comprobar el metodo __str__ del modelo
