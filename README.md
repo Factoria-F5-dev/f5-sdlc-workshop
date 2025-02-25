@@ -21,17 +21,17 @@ Cada modelo de IA recibe automáticamente un **autor aleatorio** obtenido de [ra
  cd f5-sdlc-workshop
 ```
 
-### **2️⃣ Instalar Dependencias**
-```bash
-pip install -r requirements.txt
-```
-
-### ** Optional: Virtual Environmennt**
+### ** Optional: Virtual Environmennt **
 ```bash
 python3 -m venv env
 source env/bin/activate
 pip install django
 pip install requests
+```
+
+### **2️⃣ Instalar Dependencias**
+```bash
+pip install -r requirements.txt
 ```
 ---
 
